@@ -1,0 +1,62 @@
+$default-btn-bg-color: #009688;
+$default-btn-text-color: #fff;
+
+.djs-minimap {
+  top: 1px;
+  .toggle {
+    display: none !important;
+    &::before {
+      content: '';
+    }
+  }
+}
+
+.djs-operator {
+  position: absolute;
+  left: 150px;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  .djs-operator-btn {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    color: var(--btn-text-color, #fff);
+    background-color: var(--btn-bg-color, $default-btn-bg-color);
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+
+    // hover时背景颜色变亮一点
+    &:hover {
+      filter: brightness(1.2);
+    }
+
+    // 下一个按钮
+    + .djs-operator-btn {
+      border-left: 1px solid var(--btn-text-color, #fff);
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &.left-align-btn,
+    &.zoom-out-btn {
+      margin-left: 10px;
+    }
+  }
+
+  label.djs-operator-btn.djs-operator-upload-btn {
+    height: 32px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}

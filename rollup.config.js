@@ -21,11 +21,16 @@ export default [
         }
       }
     ],
-    external: ['diagram-js'], // 不打包 diagram-js
+    external: ['diagram-js', 'bpmn-js', 'diagram-js-minimap'], // 不打包 diagram-js
     plugins: [
+      typescript({ tsconfig: './tsconfig.json', compilerOptions: {
+        outDir: undefined,
+        declaration: false,
+        noEmitOnError: true
+      } }),// 👇 顺序很重要！先转 TS，再解析依赖
       nodeResolve(),
       commonjs(),
-      typescript({ tsconfig: './tsconfig.json' })
+
     ]
   },
   // 类型声明文件

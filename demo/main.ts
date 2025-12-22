@@ -1,29 +1,14 @@
-import Diagram from 'diagram-js';
-import MyOperatorModule from '../dist/diagram-js-operator.esm.js'; // ← 直接引用 dist
+import BpmnModeler from 'bpmn-js/lib/Modeler';
+import MinimapModule from 'diagram-js-minimap';
+import OperatorModule from '../dist/diagram-js-operator.esm.js'; // ← 直接引用 dist
+import 'diagram-js-minimap/assets/diagram-js-minimap.css';
+import '../dist/diagram-js-operator.css';
 
-// 创建画布
-const diagram = new Diagram({
+console.log('bpmnModeler');
+const bpmnModeler = new BpmnModeler({
   container: '#canvas',
-  modules: [
-    // 注册你的模块
-    MyOperatorModule,
-  ],
-});
-
-// 加载一个空图
-diagram.invoke(function (canvas: any) {
-  canvas.setRootElement({ id: 'root' });
-});
-
-// 示例：添加一个矩形节点
-diagram.invoke(function (elementFactory: any, canvas: any) {
-  const shape = elementFactory.createShape({
-    type: 'my-operator-node',
-    x: 100,
-    y: 100,
-    width: 100,
-    height: 60,
-  });
-
-  canvas.addShape(shape);
+  additionalModules: [MinimapModule, OperatorModule],
+  // operator: {
+  //   disabledActions: [],
+  // },
 });
