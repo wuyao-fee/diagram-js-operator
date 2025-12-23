@@ -49,3 +49,5 @@ build/
 # OS generated
 Thumbs.db
 ehthumbs.db
+
+.npmrc
