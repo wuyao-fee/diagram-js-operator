@@ -199,17 +199,17 @@ class Operator {
         },
       });
     }
-    if (this.isActionEnabled('previewXml')) {
-      this.createAndMountButton({
-        text: '预览XML',
-        className: ['djs-operator-btn', 'preview-xml-btn'],
-        svg: createIcon('preview'),
-        parent: parent,
-        onClick: () => {
-          console.log('预览XML');
-        },
-      });
-    }
+    // if (this.isActionEnabled('previewXml')) {
+    //   this.createAndMountButton({
+    //     text: '预览XML',
+    //     className: ['djs-operator-btn', 'preview-xml-btn'],
+    //     svg: createIcon('preview'),
+    //     parent: parent,
+    //     onClick: () => {
+    //       console.log('预览XML');
+    //     },
+    //   });
+    // }
     if (this.isActionEnabled('toggleMinimap')) {
       const isOpenMinimap = this._state.isOpenMinimap;
       this.createAndMountButton({

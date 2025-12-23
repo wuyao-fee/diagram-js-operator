@@ -3,7 +3,7 @@
 #### 介绍
 
 基于diagram-js/bpmn-js的BPMN操作栏插件
-![image](https://gitee.com/wuyao-fee/img/raw/master/operator.png)
+![image](https://gitee.com/wuyao-fee/img/raw/master/operator2.png)
 
 #### 架构
 
@@ -39,11 +39,11 @@ import 'diagram-js-operator/dist/diagram-js-operator.css';
 
 #### operator配置
 
-| 配置项          | 作用             | 参数                                                                                                                                                                          |
-| :-------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| color           | 设置按钮文本颜色 | 默认#fff                                                                                                                                                                      |
-| backgroundColor | 设置按钮背景颜色 | 默认#009688                                                                                                                                                                   |
-| disabledActions | 禁用指定操作按钮 | importXml / exportXml / exportSvg / previewXml / toggleMinimap / leftAlign / centerAlign / rightAlign / topAlign / middleAlign / bottomAlign / zoomOut / zoomPercent / zoomIn |
+| 配置项          | 作用             | 参数                                                                                                                                                             |
+| :-------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| color           | 设置按钮文本颜色 | 默认#fff                                                                                                                                                         |
+| backgroundColor | 设置按钮背景颜色 | 默认#009688                                                                                                                                                      |
+| disabledActions | 禁用指定操作按钮 | importXml / exportXml / exportSvg / toggleMinimap / leftAlign / centerAlign / rightAlign / topAlign / middleAlign / bottomAlign / zoomOut / zoomPercent / zoomIn |
 
 #### 参与贡献
 
