@@ -1,8 +1,9 @@
 {
   "name": "diagram-js-operator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于diagram-js/bpmn-js的BPMN操作栏插件",
   "type": "module",
+  "private": false,
   "main": "dist/diagram-js-operator.cjs.js",
   "module": "dist/diagram-js-operator.esm.js",
   "umd:main": "dist/diagram-js-operator.umd.js",
@@ -33,7 +34,7 @@
     "type": "git",
     "url": "https://gitee.com/wuyao-fee/diagram-js-operator.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
